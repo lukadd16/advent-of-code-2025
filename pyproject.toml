@@ -1,0 +1,10 @@
+[project]
+name = "advent-of-code-2025"
+version = "0.1.0"
+description = "My solutions for Advent of Code 2025."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+authors = [
+    { name = "Lukas Adie", email = "lukas@lukadd.io"},
+]
