@@ -2,12 +2,14 @@ from solutions import day1
 from solutions import day2
 from solutions import day3
 from solutions import day4
+from solutions import day5
 
 def main() -> None:
     day1.run()
     day2.run()
     day3.run()
     day4.run()
+    day5.run()
 
 if __name__ == "__main__":
     main()
