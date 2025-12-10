@@ -3,6 +3,7 @@ from solutions import day2
 from solutions import day3
 from solutions import day4
 from solutions import day5
+from solutions import day6
 
 def main() -> None:
     day1.run()
@@ -10,6 +11,7 @@ def main() -> None:
     day3.run()
     day4.run()
     day5.run()
+    day6.run()
 
 if __name__ == "__main__":
     main()
