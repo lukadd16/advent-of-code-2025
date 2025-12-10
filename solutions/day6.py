@@ -9,6 +9,7 @@
 # PART 2: Reading the problems right-to-left, with the most significant digit at the top
 #         and the least significant at the bottom, what is the grand total now?
 
+
 def compute_answer(numbers: list[int], operation: str) -> int:
     assert operation in ("+", "*"), f"Unexpected operation '{operation}'"
 
@@ -20,6 +21,7 @@ def compute_answer(numbers: list[int], operation: str) -> int:
             answer *= num
 
     return answer
+
 
 def run() -> None:
     part_1 = 0
@@ -38,13 +40,13 @@ def run() -> None:
         for row_idx in range(len(part_one_rows)):
             problem.append(part_one_rows[row_idx][col_idx])
         problems.append(problem)
-    
+
     for problem in problems:
         numbers = list(map(int, problem[:-1]))
         operation = problem[-1]
         part_1 += compute_answer(numbers, operation)
 
-    # -- PART 2 -- (I had help with this one)
+    # -- PART 2 -- (contains code from copilot)
     columns: list[list[str]] = []
     current_col = [[] for _ in lines]
     for col in range(len(lines[0])):

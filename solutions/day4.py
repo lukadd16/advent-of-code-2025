@@ -9,6 +9,7 @@
 EMPTY_CELL = "."
 PAPER_ROLL = "@"
 
+
 # Helper function that returns the values of adjacent cells
 def get_adjacent_cells(grid: list[list[str]], row: int, col: int) -> list[str]:
     adjacent_cells = []
@@ -21,13 +22,16 @@ def get_adjacent_cells(grid: list[list[str]], row: int, col: int) -> list[str]:
             adjacent_cells.append(grid[r][c])
     return adjacent_cells
 
+
 def run() -> None:
     part_1 = 0
     part_2 = 0
 
     with open("input/day4.txt") as f:
         # Represent the grid as a 2D array
-        grid: list[list[str]] = [list(row) for line in f.read().splitlines() if (row := line.strip())]
+        grid: list[list[str]] = [
+            list(row) for line in f.read().splitlines() if (row := line.strip())
+        ]
 
     for row_idx, row in enumerate(grid):
         for col_idx, column in enumerate(row):

@@ -8,6 +8,7 @@
 # PART 1: find the maximum joltage possible from each bank; what is the total output joltage?
 # PART 2: by turning on exactly twelve batteries within each bank, what is the new total output joltage?
 
+
 def max_subsequence(s: str, k: int) -> int:
     """Return the integer value of the largest subsequence of length k (order preserved)."""
     if k >= len(s):
@@ -21,6 +22,7 @@ def max_subsequence(s: str, k: int) -> int:
         stack.append(ch)
     return int("".join(stack[:k]))
 
+
 def run() -> None:
     part_1 = 0
     part_2 = 0
@@ -31,7 +33,6 @@ def run() -> None:
     for bank in banks:
         part_1 += max_subsequence(bank, 2)
         part_2 += max_subsequence(bank, 12)
-
 
     print("-- DAY 3 --")
     print(f"Part 1: {part_1}")

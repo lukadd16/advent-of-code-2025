@@ -16,6 +16,7 @@ MIN_POSITION = 0
 MAX_POSITION = 99
 TOTAL_POSITIONS = MAX_POSITION - MIN_POSITION + 1
 
+
 @dataclass
 class Dial:
     position: int
@@ -24,7 +25,7 @@ class Dial:
         assert direction in ("L", "R")
 
         hits_on_zero = 0  # number of times the dial hits 0 during this turn
-        
+
         # This sequence prevents double counting if the turn ends on a zero
         for step in range(1, amount + 1):
             if direction == "L":
@@ -40,6 +41,7 @@ class Dial:
             self.position = (self.position + amount) % TOTAL_POSITIONS
 
         return hits_on_zero
+
 
 def run() -> None:
     part_1 = 0

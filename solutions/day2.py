@@ -6,6 +6,7 @@
 # PART 1: compute the sum of all of the invalid IDs
 # PART 2: invalid IDs can contain sequences that are repeated at least twice (123123123, 11111), compute the sum of all of these IDs
 
+
 def get_part1_invalid_id(product_id: int) -> int:
     str_id = str(product_id)
 
@@ -14,11 +15,12 @@ def get_part1_invalid_id(product_id: int) -> int:
         return 0
 
     # Cut the string in half and check if the halves are equal
-    first, second = str_id[:len(str_id)//2], str_id[len(str_id)//2:]
+    first, second = str_id[: len(str_id) // 2], str_id[len(str_id) // 2 :]
     if first == second:
         return int(str_id)
-    
+
     return 0
+
 
 def get_part2_invalid_id(product_id: int) -> int:
     str_id = str(product_id)
@@ -34,6 +36,7 @@ def get_part2_invalid_id(product_id: int) -> int:
 
     return 0
 
+
 def run() -> None:
     part_1 = 0
     part_2 = 0
@@ -48,7 +51,7 @@ def run() -> None:
     with open("input/day2.txt") as f:
         ranges: list[tuple[int, int]] = []
         for raw in f.read().strip().split(","):
-            if (r := raw.strip()):
+            if r := raw.strip():
                 first_id, last_id = r.split("-")
                 ranges.append((int(first_id), int(last_id)))
 

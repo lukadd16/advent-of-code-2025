@@ -6,6 +6,7 @@
 # PART 1: How many of the available ingredient IDs are fresh?
 # PART 2: How many fresh ingredient IDs are there?
 
+
 def run() -> None:
     part_1 = 0
     part_2 = 0
